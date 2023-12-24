@@ -1,0 +1,13 @@
+*.tmp
+*.o
+*.o.cmd
+*.a.cmd
+*.ko.cmd
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.mod.cmd
+*.order
+Module.symvers
+output/
