@@ -19,9 +19,12 @@ ifeq ("$(BUILD_SYSTEM)","YOCTO_BUILD")
   export TOOLSCHAIN_PATH=${TOOLCHAIN_DIR}
   export TOOLCHAIN_HOST=${CROSS_COMPILE}
 else
+ifeq ("$(BUILD_SYSTEM)","BUILDROOT")
   export PATH_TO_SYSROOT=${BUILDROOT_DIR}/output/host/riscv64-buildroot-linux-gnu/sysroot
   export TOOLSCHAIN_PATH=${BUILDROOT_DIR}/output/host
   export TOOLCHAIN_HOST=${TOOLSCHAIN_PATH}/bin/riscv64-unknown-linux-gnu-
+else
+endif
 endif
 export PATH_TO_BUILDROOT=$(BUILDROOT_DIR)
 
